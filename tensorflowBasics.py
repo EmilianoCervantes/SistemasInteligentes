@@ -33,6 +33,8 @@ ph = tf.placeholder("float", None)
 ph2 = tf.placeholder("float", None)
 # Operaciones pueden ponerse explicitas o declararse
 cuadrado = ph ** 2
+print("Cuadrado:")
+print(cuadrado)
 with tf.Session() as ss:
 	res = ss.run(cuadrado, feed_dict={ph: [5, 8, 9], ph2: [6, 6, 6]})
 	print(res)
